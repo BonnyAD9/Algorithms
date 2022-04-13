@@ -8,6 +8,7 @@ void swap(float* f1, float* f2);
 void bubbleSort(float* arr, int length);
 void optimizedBubbleSort(float* arr, int length);
 void recursiveBubbleSort(float* arr, int length);
+void recursiveOptimizedBubbleSort(float* arr, int length);
 
 //======<<Regural Bubble Sort>>======//
 
