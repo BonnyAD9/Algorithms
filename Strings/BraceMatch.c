@@ -7,7 +7,7 @@ int indexOf(char* str, char c);
 
 // algorithms
 bool checkBrace(char* str, char o, char c);
-bool recursiveCheckBraces(char* str, char* o, char* c);
+bool checkBraces(char* str, char* o, char* c);
 
 //==<<Checking single type of braces>>==//
 
@@ -31,20 +31,20 @@ bool checkBrace(char *str, char o, char c)
 
 //==<<Checking multiple types of braces recursively>>==//
 
-int _recursiveCheckBraces(char* str, char* o, char* c, int* ci);
+int _checkBraces(char* str, char* o, char* c, int* ci);
 
 /* Time:    O(n)
  * Memory:  O(1)
  * TCO:     no
  */
 // wrapper for _recursiveCheckBraces
-bool recursiveCheckBraces(char* str, char* o, char* c)
+bool checkBraces(char* str, char* o, char* c)
 {
     int ci;
-    return _recursiveCheckBraces(str, o, c, &ci) == -1;
+    return _checkBraces(str, o, c, &ci) == -1;
 }
 
-int _recursiveCheckBraces(char *str, char *o, char *c, int* ci)
+int _checkBraces(char *str, char *o, char *c, int* ci)
 {
     int pos = -1;
     int i;
@@ -57,7 +57,7 @@ int _recursiveCheckBraces(char *str, char *o, char *c, int* ci)
         if ((pos = indexOf(o, str[i])) == -1)
             continue;
 
-        int adv = _recursiveCheckBraces(str + i + 1, o, c, ci);
+        int adv = _checkBraces(str + i + 1, o, c, ci);
 
         if (adv < 0)
             return -2;
@@ -81,7 +81,7 @@ int main()
     for (int i = 0; i < len; i++)
     {
         //bool res = checkBrace(s[i], '(', ')');
-        bool res = recursiveCheckBraces(s[i], "([{", ")]}");
+        bool res = checkBraces(s[i], "([{", ")]}");
         printf("%hhu\n", res);
     }
 
