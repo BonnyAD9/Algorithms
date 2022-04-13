@@ -7,7 +7,7 @@ int indexOf(char* str, char c);
 
 // algorithms
 bool checkBrace(char* str, char o, char c);
-bool recursiveCheckBraces(char* str, char *o, char *c);
+bool recursiveCheckBraces(char* str, char* o, char* c);
 
 //==<<Checking single type of braces>>==//
 
