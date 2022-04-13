@@ -12,3 +12,10 @@ void recursiveOptimizedBubbleSort(float* arr, int length);
 - `optimizedBubbleSort` tracks position of the last swap so it doesn't need to check after it
 - `recursiveBubbleSort` `bubbleSort` implemented recursively with TCO
 - `recursiveOptimizedBubbleSort` `optimizedBubbleSort` implemented recursively with TCO
+
+## Select sort
+```[C]
+void selectSort(float* arr, int length);
+```
+
+- `selectSort` simple select sort algorithm
