@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> // printf
+#include <stdlib.h> // EXIT_SUCCESS
 
-// helper function
-void swap(float* f1, float* f2);
+#include "../../helpers.h" // swap, printArray
 
 // algorithms
 void selectSort(float* arr, int length);
+
 
 //==========<<Select Sort>>==========//
 
@@ -28,10 +28,8 @@ void selectSort(float* arr, int length)
     }
 }
 
-//==<<Testing and implementation of helper functions>>==//
 
-// prints array into stdout
-void printArray(float *arr, int length);
+//============<<Testing>>============//
 
 int main()
 {
@@ -39,26 +37,12 @@ int main()
     float arr[] = {5, 6, 8, 2, 3, 7, 9, 4, 0, 1};
 
     printf("Befor sorting:\n");
-    printArray(arr, length);
+    printArray(arr, length, NULL, NULL);
     printf("Sorted:\n");
 
     selectSort(arr, length);
 
-    printArray(arr, length);
+    printArray(arr, length, NULL, NULL);
 
     return EXIT_SUCCESS;
-}
-
-void swap(float *f1, float *f2)
-{
-    float h = *f1;
-    *f1 = *f2;
-    *f2 = h;
-}
-
-void printArray(float *arr, int length)
-{
-    for (int i = 0; i < length; i++)
-        printf("%f ", arr[i]);
-    printf("\n");
 }

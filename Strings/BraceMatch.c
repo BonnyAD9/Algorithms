@@ -1,13 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include <stdio.h> // printf
+#include <stdlib.h> // EXIT_SUCCESS
+#include <stdbool.h> // bool
 
-// helper functions
-int indexOf(char* str, char c);
+#include "../helpers.h" // indexOf
 
 // algorithms
 bool checkBrace(char* str, char o, char c);
 bool checkBraces(char* str, char* o, char* c);
+
 
 //==<<Checking single type of braces>>==//
 
@@ -28,6 +28,7 @@ bool checkBrace(char *str, char o, char c)
 
     return i == 0;
 }
+
 
 //==<<Checking multiple types of braces recursively>>==//
 
@@ -71,7 +72,8 @@ int _checkBraces(char *str, char *o, char *c, int* ci)
     return -1;
 }
 
-//==<<Testing and implementation of helper functions>>==//
+
+//============<<Testing>>============//
 
 int main()
 {
@@ -86,15 +88,4 @@ int main()
     }
 
     return EXIT_SUCCESS;
-}
-
-int indexOf(char* str, char c)
-{
-    for (int i = 0; str[i]; i++)
-    {
-        if (str[i] == c)
-            return i;
-    }
-
-    return -1;
 }

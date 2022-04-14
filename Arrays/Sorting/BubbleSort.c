@@ -1,14 +1,14 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include <stdlib.h> // EXIT_SUCCESS
+#include <stdio.h> // printf
 
-// helper function, swaps values of two float pointers
-void swap(float* f1, float* f2);
+#include "../../helpers.h" // swap, printArray
 
 // sorting algorithms
 void bubbleSort(float* arr, int length);
 void optimizedBubbleSort(float* arr, int length);
 void recursiveBubbleSort(float* arr, int length);
 void recursiveOptimizedBubbleSort(float* arr, int length);
+
 
 //======<<Regural Bubble Sort>>======//
 
@@ -26,6 +26,7 @@ void bubbleSort(float* arr, int length)
         }
     }
 }
+
 
 //=====<<Optimized Bubble Sort>>=====//
 
@@ -47,6 +48,7 @@ void optimizedBubbleSort(float* arr, int length)
         }
     }
 }
+
 
 //=====<<Recursive Bubble Sort>>=====//
 
@@ -78,6 +80,7 @@ void recursiveBubble(float* arr, int length)
     recursiveBubble(arr + 1, length - 1);
 }
 
+
 //==<<Optimized Recursive Bubble Sort>>==//
 
 // helper function for optimized recursive bubble sort
@@ -106,10 +109,8 @@ int optimizedRecursiveBubble(float* arr, int length, int lastSwap, int sinceLast
     return optimizedRecursiveBubble(arr + 1, length - 1, lastSwap + sinceLastSwap, 1);
 }
 
-//==<<Testing and implementation of helper functions>>==//
 
-// prints array into stdout
-void printArray(float* arr, int length);
+//============<<Testing>>============//
 
 int main()
 {
@@ -117,7 +118,7 @@ int main()
     float arr[] = { 5, 6, 8, 2, 3, 7, 9, 4, 0, 1 };
 
     printf("Befor sorting:\n");
-    printArray(arr, length);
+    printArray(arr, length, NULL, NULL);
     printf("Sorted:\n");
 
     //bubbleSort(arr, length);
@@ -125,21 +126,7 @@ int main()
     //recursiveBubbleSort(arr, length);
     optimizedRecursiveBubbleSort(arr, length);
 
-    printArray(arr, length);
+    printArray(arr, length, NULL, NULL);
 
     return EXIT_SUCCESS;
-}
-
-void swap(float *f1, float *f2)
-{
-    float h = *f1;
-    *f1 = *f2;
-    *f2 = h;
-}
-
-void printArray(float* arr, int length)
-{
-    for (int i = 0; i < length; i++)
-        printf("%f ", arr[i]);
-    printf("\n");
 }
