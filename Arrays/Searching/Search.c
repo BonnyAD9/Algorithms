@@ -5,6 +5,7 @@
 
 // algorithms
 int search(int* arr, int length, int item);
+int recursiveSearch(int* arr, int length, int item);
 
 
 //=============<<Search>>============//
