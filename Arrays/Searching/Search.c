@@ -39,7 +39,7 @@ int recursiveSearch(int* arr, int length, int item)
 
     if (length < 0)
         return -1;
-    
+
     if (arr[length] == item)
         return length;
 
@@ -62,4 +62,5 @@ int main()
     int index = recursiveSearch(arr, length, toFind);
 
     printf("%d is at index: %d\n", toFind, index);
+    return EXIT_SUCCESS;
 }
