@@ -52,8 +52,8 @@ int recursiveSearch(int* arr, int length, int item)
 int main()
 {
     const int length = 10;
-    int arr[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    const int toFind = 6;
+    int arr[] = { 5, 6, 8, 2, 3, 7, 9, 4, 0, 1 };
+    const int toFind = 7;
 
     printf("Array:\n");
     printArrayI(arr, length, NULL, NULL);
