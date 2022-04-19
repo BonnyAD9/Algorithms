@@ -20,7 +20,7 @@ int binarySearch(int* arr, int length, int item)
     {
         if (arr[piv] == item)
             return piv;
-        
+
         if (item < arr[piv])
         {
             length = i;
@@ -81,4 +81,6 @@ int main()
     //int index = recursiveBinarySearch(arr, length, toFind);
 
     printf("%d is at index %d\n", toFind, index);
+
+    return EXIT_SUCCESS;
 }
