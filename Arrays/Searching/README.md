@@ -50,11 +50,16 @@ Returns index of the item in the array if it is present, otherwise -1.
 These algorithms search for an item in a sorted array.
 
 ```
+int binarySearch(int* arr, int length, int item);
 int recursiveBinarySearch(int* arr, int length, int item);
 ```
 
 Returns index of the item in the array if it is present, otherwise -1.
 
+- `binarySearch`
+    - worst time: O(log(n))
+    - best time: O(1)
+    - space: O(1)
 - `recursiveBinarySearch`
     - implemented recursively with TCO
     - worst time: O(log(n))
