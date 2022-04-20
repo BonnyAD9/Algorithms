@@ -84,29 +84,29 @@ void recursiveBubble(float* arr, int length)
 //==<<Optimized Recursive Bubble Sort>>==//
 
 // helper function for optimized recursive bubble sort
-int optimizedRecursiveBubble(float* arr, int length, int lastSwap, int sinceLastSwap);
+int recursiveOptimizedBubble(float* arr, int length, int lastSwap, int sinceLastSwap);
 
 /* Worst Time:  O(n^2)
  * Best Time:   O(n)
  * Space:       O(1)
  * TCO:         yes
  */
-void optimizedRecursiveBubbleSort(float* arr, int length)
+void recursiveOptimizedBubbleSort(float* arr, int length)
 {
     if (length > 1)
-        optimizedRecursiveBubbleSort(arr, optimizedRecursiveBubble(arr, length, 1, 0));
+        recursiveOptimizedBubbleSort(arr, recursiveOptimizedBubble(arr, length, 1, 0));
 }
 
-int optimizedRecursiveBubble(float* arr, int length, int lastSwap, int sinceLastSwap)
+int recursiveOptimizedBubble(float* arr, int length, int lastSwap, int sinceLastSwap)
 {
     if (length <= 1)
         return lastSwap;
     
     if (*arr <= arr[1])
-        return optimizedRecursiveBubble(arr + 1, length - 1, lastSwap, sinceLastSwap + 1);
+        return recursiveOptimizedBubble(arr + 1, length - 1, lastSwap, sinceLastSwap + 1);
     
     swap(arr, &arr[1]);
-    return optimizedRecursiveBubble(arr + 1, length - 1, lastSwap + sinceLastSwap, 1);
+    return recursiveOptimizedBubble(arr + 1, length - 1, lastSwap + sinceLastSwap, 1);
 }
 
 
@@ -124,7 +124,7 @@ int main()
     //bubbleSort(arr, length);
     //optimizedBubbleSort(arr, length);
     //recursiveBubbleSort(arr, length);
-    optimizedRecursiveBubbleSort(arr, length);
+    recursiveOptimizedBubbleSort(arr, length);
 
     printArray(arr, length, NULL, NULL);
 
