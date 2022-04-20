@@ -37,6 +37,7 @@ int _checkBraces(char* str, char* o, char* c, int* ci);
 /* Time:    O(n)
  * Memory:  O(1)
  * TCO:     no
+ * Depth:   same as braces depth
  */
 // wrapper for _recursiveCheckBraces
 bool checkBraces(char* str, char* o, char* c)

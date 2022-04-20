@@ -7,6 +7,7 @@
     - Recursive
     - Recursive Optimized
 - Select Sort
+- Merge Sort
 
 ## Reverse
 - Regural
