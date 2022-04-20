@@ -8,10 +8,10 @@ void reverse(float* arr, int length);
 void recursiveReverse(float* arr, int length);
 ```
 
-- Regural
+- `reverse`
     - Time: O(n)
     - Memory: O(1)
-- Recursive
+- `recursiveReverse`
     - Time: O(n)
     - Memory: O(1)
     - TCO: yes
