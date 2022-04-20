@@ -7,6 +7,7 @@
 // algorithms
 bool mergeSort(float* arr, int length);
 
+
 //===========<<Merge Sort>>==========//
 
 void _mergeSort(float* arr, float* harr, int length, bool toSame);
@@ -21,7 +22,7 @@ bool mergeSort(float* arr, int length)
 {
     if (!arr || length < 0)
         return false;
-    
+
     if (length <= 1)
         return true;
 
@@ -94,4 +95,6 @@ int main()
 
     printf("sorted:\n");
     printArray(arr, length, NULL, NULL);
+
+    return EXIT_SUCCESS;
 }
