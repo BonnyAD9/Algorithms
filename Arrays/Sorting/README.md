@@ -3,7 +3,7 @@
 ## Bubble sort
 These algorithms sort array using bubble sort.
 
-```[C]
+```C
 void bubbleSort(float* arr, int length);
 void optimizedBubbleSort(float* arr, int length);
 void recursiveBubbleSort(float* arr, int length);
@@ -33,7 +33,7 @@ void recursiveOptimizedBubbleSort(float* arr, int length);
 ## Select sort
 This algorithm sorts array using select sort.
 
-```[C]
+```C
 void selectSort(float* arr, int length);
 ```
 
@@ -42,7 +42,7 @@ void selectSort(float* arr, int length);
     - Space: O(n)
 
 ## Merge sort
-```
+```C
 bool mergeSort(float* arr, int length);
 ```
 
