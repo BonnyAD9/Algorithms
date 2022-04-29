@@ -3,7 +3,7 @@
 ## Reverse
 These algorithms reverse array.
 
-```
+```C
 void reverse(float* arr, int length);
 void recursiveReverse(float* arr, int length);
 ```
