@@ -3,7 +3,7 @@
 ## Search
 These algorithms search for an item in a array.
 
-```[C]
+```C
 int search(int* arr, int length, int item);
 int recursiveSearch(int* arr, int length, int item);
 ```
@@ -27,7 +27,7 @@ These algorithms search for an item in a sorted array.
 The optimization is that they can exit without comparing every item even
 if the searched item is not present in the array.
 
-```
+```C
 int sortedSearch(int* arr, int length, int item);
 int recursiveSortedSearch(int* arr, int length, int item);
 ```
@@ -49,7 +49,7 @@ Returns index of the item in the array if it is present, otherwise -1.
 ## Binary Search
 These algorithms search for an item in a sorted array.
 
-```
+```C
 int binarySearch(int* arr, int length, int item);
 int recursiveBinarySearch(int* arr, int length, int item);
 ```
